@@ -1,0 +1,49 @@
+name: "page2"
+title: "Vanessa di Lego"
+description: |
+  My Website
+output_dir: "."
+navbar:
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Formal Demography"
+      href: formal-demography.html
+    - text: "COVID-19"
+      href: covid.html
+    - text: "Gender Paradox"
+      href: gender-paradox.html
+    - text: "Work in Progress"
+      href: progress.html
+    - text: "Math Stuff"
+      href: math.html
+    - text: "La Comédie Humaine"
+      href: balzac.html
+    - text: "Publications"
+      menu:
+        - text: "2020-2021"
+          href: publi_2021.html
+        - text: "2017-2019"
+          href: publi_2019.html
+    - text: "Blog"
+      menu:
+        - text: ""
+          href:
+        - text: ""
+          href:
+        - text: ""
+          href:
+    - icon: fab fa-github
+      href: https://github.com/vdilego
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/vanessa-di-lego-51070274/
+    - icon: fab fa-twitter
+      href: https://twitter.com/v_dilego
+    - icon: far fa-address-card
+      href: "mailto:Vanessa.DiLego@oeaw.ac.at"
+collections:
+  posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: true
+output: distill::distill_article

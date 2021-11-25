@@ -1,0 +1,23 @@
+---
+title: "COVID-19"
+description: |
+  Follow here my ideas and projects connected to the COVID-19 pandemic
+---
+
+![Source: 
+[Own elaboration, extracted from Sánchez-Romero et al., 2021](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245845)](covid1.png){width=300}
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+My research with colleagues [**Miguel Sánchez-Romero**](https://www.oeaw.ac.at/vid/people/staff/miguel-sanchez-romero), [**Alexia Fürnkranz-Prskawetz**](https://www.oeaw.ac.at/vid/people/staff/alexia-fuernkranz-prskawetz), and [**Bernardo Lanza Queiroz**](https://docentes.face.ufmg.br/lanza/) on COVID-19 has focused on indirectly estimating the proportion of people ever infected, the interpretation of the case-fatality rate (CFR), and estimating the effectiveness of vaccines in preventing deaths. Our most recent published work was [**An indirect method to monitor the fraction of people ever infected with COVID-19: An application to the United States**](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245845). In this work we propose a complementary approach that combines estimated (1) infection fatality rates (IFR) using a Bayesian melding SEIR model with (2) reported case-fatality rates (CFR), in order to indirectly estimate the fraction of people ever infected (from the total population) and detected (from the ever infected). We apply the technique to the U.S. due to their remarkable regional diversity and because at the moment of our analysis (January 2021) the country counted with almost a quarter of all global confirmed cases and deaths. You can find all the codes to replicate the study [**here**](https://osf.io/c26p7/).
+
+We also performed an extensive estimation for all countries in the world in a working paper of the [**Vienna University of Technology, Institute of Statistics and Mathematical Methods in Economics, Research Group Economics, Vienna**](https://swm.tuwien.ac.at/) entitled [**How many lives can be saved? A global view on the impact of testing, herd immunity and demographics on COVID-19 fatality rates**](https://www.econstor.eu/handle/10419/218732), where we assess the impact of testing, herd immunity and demographics in COVID-19 Fatality rates.
+
+
+
+
+

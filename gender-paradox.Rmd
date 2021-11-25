@@ -1,0 +1,30 @@
+---
+title: "Gender Paradox"
+description: |
+  Follow here my ideas and projects connected to my core research in demography
+---
+
+
+![Source: 
+[Own elaboration, extracted from Di Lego et al., 2019](https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-69892-2_798-2)](gen_paradox.png){width=300}
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+There is consistent evidence that women live longer than men at all ages, but spend a higher proportion of their total life expectancy in poorer health, a phenomenon described as the “male-female health-survival paradox” or the “gender paradox in health and mortality”. However, it is difficult to explain the process because morbidity by sex differs considerably across domains of health, age groups, social contexts and severity level. In addition, women and men report differently their health in surveys, making it cumbersome to understand whether what drives the paradox is a higher female morbidity or male mortality, a different reporting behaviour, or all of those aspects together.
+
+My research focuses on the role of measurement and estimation in explaining the paradox. This relates to the different health dimensions, how mortality and morbidity are estimated and data gaps by gender. 
+
+Below you can find some of my published work on this topic. Check all my publications in the tab **Publications** of the website!
+
+2021: [Nepomuceno M. R., Di Lego, V., Turra, C.M. (2021). Gender disparities in health at older ages and their consequences for well-being in Latin America and the Caribbean. Vienna Yearbook of Population Research 2021 (Vol. 19). doi:10.1553/populationyearbook2021.res2.1](https://www.austriaca.at/0xc1aa5576_0x003c8cc2.pdf)
+
+2020: [Di Lego, Vanessa; Di Giulio, Paola; Luy, Marc.(2020). "Gender differences in healthy and unhealthy life years", in: Jagger, C.; Crimmins, E.; Saito, Y.; De Carvalho Yokota, R.; Van Oyen H.; Robine, J.-M. (eds.): International Handbook of Health Expectancies, Cham, Springer: 151-172.](https://link.springer.com/chapter/10.1007%2F978-3-030-37668-0_11)
+
+2019: [Di Lego, Vanessa; Lazarevič, Patrick; Luy, Marc: “The Male-Female Health-Mortality Paradox”, (2019) in: Gu, Danan; Dupre, Matthew E. (eds.): Encyclopedia of Gerontology and Population Aging, Dordrecht et al., Springer, doi: 10.1007/978-3-319-69892-2_798-2 (published online: 17.10.2019)](https://link.springer.com/referenceworkentry/10.1007%2F978-3-319-69892-2_798-2)
+
+
+

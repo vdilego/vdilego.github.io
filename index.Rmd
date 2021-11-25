@@ -1,0 +1,17 @@
+---
+title: "Vanessa di Lego"
+description: |
+  Welcome to my website. I hope you enjoy it!
+site: distill::distill_website
+---
+
+![Source:
+[The Met Museum, New York](https://www.metmuseum.org/pt/art/collection/search/436105)](death_socrates.jpeg){width=100}
+
+
+<style>
+body {
+text-align: justify}
+</style>
+
+The Greek philosopher [Socrates (469–399 B.C.)](https://en.wikipedia.org/wiki/Trial_of_Socrates) was convicted of moral corruption and impiety by the Athens, willingly drinking poisonous hemlock. For me, this is representative of the long-standing discussion on the "danger" of knowledge and how learning how to think philosophically (i.e., learning how to think in the first place) and thus pose questions to established institutions and ways of thinking and living can be considered a threat by those who gatekeep the status quo. I am a researcher scientist who is open-minded and seeks knowledge in a barrier-free manner; who constantly feels dissatisfied by the current level of knowledge and attempts to go beyond disciplinary walls (the gatekeepers of our contemporary world). Feel free to tell me I am wrong and let's build a better world together.    
