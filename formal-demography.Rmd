@@ -5,7 +5,7 @@ description: |
 ---
 
 ![Source: 
-[Elaborated by Monica Alexander](https://formaldemography.github.io/working_group/)](formal.png){width=30}
+[Elaborated by Monica Alexander](https://formaldemography.github.io/working_group/)](fdwg_logo.jpg){width=10}
 
 
 <style>
