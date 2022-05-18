@@ -13,7 +13,7 @@ meta() %>%
   meta_viewport() %>%
   meta_social(
     title = "Vanessa di Lego: Posts",
-    url = "https://vdilego.github.io//posts",
+    url = "https://vdilego.github.io/posts",
     og_type = "website",
     og_author = c("di Lego","Vanessa"),
     twitter_card_type = "summary",

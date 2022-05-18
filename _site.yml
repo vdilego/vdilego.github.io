@@ -2,6 +2,7 @@ name: "page2"
 title: "Vanessa di Lego"
 description: |
   My Website
+base_url: https://vdilego.github.io/
 output_dir: "."
 navbar:
   right:
