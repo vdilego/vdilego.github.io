@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 description: |
-  I am a demographer who focuses on differences between women and men in mortality and health; I am a math and literature enthusiast; piano and tennis player in the making. Love to swim, cook and read in my free time!
+  I am a demographer who focuses on differences between women and men in mortality and health; I am a math and literature enthusiast; piano, cello and tennis player in the making. Love to swim, cook and read in my free time!
 ---
 
 

@@ -1,0 +1,64 @@
+---
+title: "Artificial Inteligence and Mathematical Intuition"
+description: |
+  Is it still mathematics when you use AI for guiding intuition?
+author:
+  - name: Vanessa di Lego
+    url: https://twitter.com/v_dilego
+date: 2022-05-10
+twitter:
+  site: "@v_dilego"
+  creator: "@v_dilego"
+base_url: https://vdilego.github.io/
+categories:
+  - Mathematics
+  - Artifical Inteligence
+  - Intuition
+  - Knowledge
+  - Human
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r metathis, message=FALSE, warning=FALSE, include=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "vdilego/vdilego.github.io") %>%
+  meta_viewport() %>%
+  meta_social(
+    title = "Machine Learning and Mathematical Intuition",
+    url = "https://vdilego.github.io/posts/2022-05-10-artificial-inteligence-and-mathematical-intuition/",
+    image = "https://vdilego.github.io/posts/2022-05-10-artificial-inteligence-and-mathematical-intuition/knot.jpeg",
+    og_type = "website",
+    og_author = c("di Lego","Vanessa"),
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@v_dilego"
+  )
+```
+
+
+## Mathematics, Intuition and Artificial Inteligence 
+
+In December 2021, a paper was published in [**Nature**](https://www.nature.com/articles/s41586-021-04086-x), showing how machine-learning tools can be used to guide the intuition of mathematicians. The paper particularly outlines a framework for how artificial inteligence and mathematicians can work together for advancing the field of pure mathematics and make powerful contributions to open problems. Two fields are particularly the focus of the paper: 1. the algebraic and geometric structure of knots and the combinatorial invariance conjecture for symmetric groups. The paper is quite interesting and it raises a lot of issues. One is concerned with the very field of mathematics and the concept of intution. 
+
+### What is Mathematics?
+
+### What is Intuition for Mathematicians?
+
+In one another part of my website I mention Kevin Buzzard on Proof and this talk at [**Collège de France**](https://www.college-de-france.fr/site/timothy-gowers/seminar-2021-11-15-14h00.htm) on November 15, 2021, [**Professor and Mathematician Kevin Buzzard**](https://www.imperial.ac.uk/people/k.buzzard) prompts the topic of "what is proof?", within the field of Philosophy of Mathematical Practice. This sets the tone for what actually is a mathematical proof, a longstanding philosophical issue of course, like all complex ones. 
+
+### Is Mathematics still Mathematics when not "Human"?
+
+
+
+--VDL
+
+
+
+

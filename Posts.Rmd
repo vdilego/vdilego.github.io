@@ -1,0 +1,23 @@
+---
+title: "Posts"
+listing: posts
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(metathis)
+meta() %>%
+  meta_description(
+    "Vanessa's Blog Posts"
+  ) %>%
+  meta_name("github-repo" = "vdilego/vdilego.github.io") %>%
+  meta_viewport() %>%
+  meta_social(
+    title = "Vanessa di Lego: Posts",
+    url = "https://vdilego.github.io//posts",
+    og_type = "website",
+    og_author = c("di Lego","Vanessa"),
+    twitter_card_type = "summary",
+    twitter_creator = "@v_dilego"
+  )
+```
+
