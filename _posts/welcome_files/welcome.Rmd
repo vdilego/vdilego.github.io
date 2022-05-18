@@ -2,9 +2,9 @@
 title: "Welcome to my blog!"
 description: |
   Resources and topics I find inspiring regarding all sorts of fields and issues
+base_url: https://vdilego.github.io/
 author:
   - name: Vanessa di Lego
-    url: https://twitter.com/v_dilego
 date: 2022-05-10
 twitter:
   site: "@v_dilego"
