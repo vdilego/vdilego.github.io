@@ -9,7 +9,7 @@ date: 2022-05-10
 twitter:
   site: "@v_dilego"
   creator: "@v_dilego"
-base_url: https://vdilego.github.io/
+base_url: https://vdilego.github.io/posts
 categories:
   - Mathematics
   - Artifical Inteligence

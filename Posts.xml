@@ -9,6 +9,16 @@
     <generator>Distill</generator>
     <lastBuildDate>Tue, 10 May 2022 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Welcome to my blog!</title>
+      <dc:creator>Vanessa di Lego</dc:creator>
+      <link>https://vdilego.github.io/posts/welcome_files</link>
+      <description>Resources and topics I find inspiring regarding all sorts of fields and issues</description>
+      <category>Introduction</category>
+      <category>Interests</category>
+      <guid>https://vdilego.github.io/posts/welcome_files</guid>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Artificial Inteligence and Mathematical Intuition</title>
       <dc:creator>Vanessa di Lego</dc:creator>
       <link>https://vdilego.github.io/posts/10May2022_files</link>
@@ -19,17 +29,7 @@
       <category>Knowledge</category>
       <category>Human</category>
       <guid>https://vdilego.github.io/posts/10May2022_files</guid>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Welcome to my blog!</title>
-      <dc:creator>Vanessa di Lego</dc:creator>
-      <link>https://vdilego.github.io/posts/welcome_files</link>
-      <description>Resources and topics I find inspiring regarding all sorts of fields and issues</description>
-      <category>Introduction</category>
-      <category>Interests</category>
-      <guid>https://vdilego.github.io/posts/welcome_files</guid>
-      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
