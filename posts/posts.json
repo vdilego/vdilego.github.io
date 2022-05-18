@@ -1,25 +1,5 @@
 [
   {
-    "path": "posts/welcome_files/",
-    "title": "Welcome to my blog!",
-    "description": "Resources and topics I find inspiring regarding all sorts of fields and issues",
-    "author": [
-      {
-        "name": "Vanessa di Lego",
-        "url": "https://twitter.com/v_dilego"
-      }
-    ],
-    "date": "2022-05-10",
-    "categories": [
-      "Introduction",
-      "Interests"
-    ],
-    "contents": "\r\n\r\nContents\r\nIntroduction\r\nSome R pain as well\r\n\r\nHello, and welcome to my blog!\r\nIntroduction\r\nIn my series of posts, I will explore themes I find interesting, in the intersection of demography, social and medical sciences, mathematics, policy relevant issues and much more. This is a personal view and space to connect the dots and my ecclectic taste! A bit of literature, music and food will have some space too. After all, they are the spice of life. Hope you enjoy!\r\nFollow me as well on my professional page, github and @v_dilego.\r\nSome R pain as well\r\nI will also share some R pain trajectories and other nerdy enterprises. I have been exploring a lot the connections of {xaringan} and other resources.\r\n–VDL\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2022-05-18T18:34:29+02:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/10May2022_files/",
     "title": "Artificial Inteligence and Mathematical Intuition",
     "description": "Is it still mathematics when you use AI for guiding intuition?",
@@ -41,5 +21,25 @@
     "preview": {},
     "last_modified": "2022-05-18T18:49:16+02:00",
     "input_file": "10May2022.knit.md"
+  },
+  {
+    "path": "posts/welcome_files/",
+    "title": "Welcome to my blog!",
+    "description": "Resources and topics I find inspiring regarding all sorts of fields and issues",
+    "author": [
+      {
+        "name": "Vanessa di Lego",
+        "url": "https://twitter.com/v_dilego"
+      }
+    ],
+    "date": "2022-05-10",
+    "categories": [
+      "Introduction",
+      "Interests"
+    ],
+    "contents": "\r\n\r\nContents\r\nIntroduction\r\nSome R pain as well\r\n\r\nHello, and welcome to my blog!\r\nIntroduction\r\nIn my series of posts, I will explore themes I find interesting, in the intersection of demography, social and medical sciences, mathematics, policy relevant issues and much more. This is a personal view and space to connect the dots and my ecclectic taste! A bit of literature, music and food will have some space too. After all, they are the spice of life. Hope you enjoy!\r\nFollow me as well on my professional page, github and @v_dilego.\r\nSome R pain as well\r\nI will also share some R pain trajectories and other nerdy enterprises. I have been exploring a lot the connections of {xaringan} and other resources.\r\n–VDL\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-05-18T18:50:03+02:00",
+    "input_file": "welcome.knit.md"
   }
 ]
