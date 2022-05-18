@@ -6,9 +6,6 @@ base_url: https://vdilego.github.io/
 author:
   - name: Vanessa di Lego
 date: 2022-05-10
-twitter:
-  site: "@v_dilego"
-  creator: "@v_dilego"
 categories:
   - Introduction
   - Interests
