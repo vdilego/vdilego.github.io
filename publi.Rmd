@@ -2,7 +2,7 @@
 title: "Publications"
 description: |
   My list of publications
-  
+base_url: https://vdilego.github.io/
 ---
 
 # Published
