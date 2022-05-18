@@ -2,27 +2,8 @@
 title: "Vanessa di Lego"
 description: |
   Welcome to my website. I hope you enjoy it!
-base_url: https://vdilego.github.io/
 site: distill::distill_website
 ---
-
-```{r setup, message=FALSE, warning=FALSE, include=FALSE}
-library(metathis)
-meta() %>%
-  meta_description(
-    " Welcome to my website. I hope you enjoy it!"
-  ) %>% 
-  meta_name("github-repo" = "vdilego/vdilego.github.io") %>% 
-  meta_viewport() %>% 
-  meta_social(
-    title = "The Distillery",
-    url = "https://vdilego.github.io/",
-    og_type = "website",
-    og_author = c("Vanessa di Lego")
-  )
-
-```
-
 
 
 ![Source:
