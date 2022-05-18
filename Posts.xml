@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Vanessa di Lego</title>
+    <link>https://vdilego.github.io/</link>
+    <atom:link href="https://vdilego.github.io/Posts.xml" rel="self" type="application/rss+xml"/>
+    <description>My Website
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>title of post</title>
+      <dc:creator>Vanessa di Lego</dc:creator>
+      <link>https://vdilego.github.io/posts/2022-05-18-title-of-post</link>
+      <description>A short description of the post.</description>
+      <guid>https://vdilego.github.io/posts/2022-05-18-title-of-post</guid>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Artificial Inteligence and Mathematical Intuition</title>
+      <dc:creator>Vanessa di Lego</dc:creator>
+      <link>https://vdilego.github.io/posts/10May2022_files</link>
+      <description>Is it still mathematics when you use AI for guiding intuition?</description>
+      <category>Mathematics</category>
+      <category>Artifical Inteligence</category>
+      <category>Intuition</category>
+      <category>Knowledge</category>
+      <category>Human</category>
+      <guid>https://vdilego.github.io/posts/10May2022_files</guid>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to my blog!</title>
+      <dc:creator>Vanessa di Lego</dc:creator>
+      <link>https://vdilego.github.io/posts/welcome_files</link>
+      <description>Resources and topics I find inspiring regarding all sorts of fields and issues</description>
+      <category>Introduction</category>
+      <category>Interests</category>
+      <guid>https://vdilego.github.io/posts/welcome_files</guid>
+      <pubDate>Tue, 10 May 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://vdilego.github.io/posts/welcome_files/death_socrates.jpeg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
