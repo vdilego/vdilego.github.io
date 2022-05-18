@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://vdilego.github.io/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -91,6 +90,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   <meta property="description" itemprop="description" content="Welcome to my website. I hope you enjoy it!"/>
   
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -109,7 +109,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Vanessa di Lego"]},{"type":"character","attributes":{},"value":["Welcome to my website. I hope you enjoy it!\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["Vanessa di Lego"]},{"type":"character","attributes":{},"value":["Welcome to my website. I hope you enjoy it!\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2075,12 +2075,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!/posts/.test(location.pathname)) {
+        return;
+      }
+  
+      var script = document.createElement("script");
+      script.src = "https://utteranc.es/client.js";
+      script.setAttribute("repo", "vdilego/vdilego.github.io");
+      script.setAttribute("issue-term", "og:title");
+      script.setAttribute("crossorigin", "anonymous");
+      script.setAttribute("label", "comment_thread");
+  
+      /* wait for article to load, append script to article element */
+      var observer = new MutationObserver(function (mutations, observer) {
+        var article = document.querySelector("d-article");
+        if (article) {
+          observer.disconnect();
+          /* HACK: article scroll */
+          article.setAttribute("style", "overflow-y: hidden");
+          article.appendChild(script);
+        }
+      });
+  
+      observer.observe(document.body, { childList: true });
+    });
+  </script>
+  
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
@@ -2121,6 +2149,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="mailto:Vanessa.DiLego@oeaw.ac.at">
 <i class="far fa-address-card" aria-hidden="true"></i>
 </a>
+<a href="https://github.com/vdilego/vdilego.github.io" aria-label="Link to source">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2128,238 +2159,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Vanessa di Lego">Vanessa di Lego</h1>
-<a href="posts/2022-05-18-title-of-post/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">May 18, 2022</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>title of post</h2>
-<div class="dt-tags"></div>
-<p>A short description of the post.</p>
-</div>
-</a>
-<a href="posts/10May2022_files/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Mathematics","Artifical Inteligence","Intuition","Knowledge","Human"]}</script>
-<div class="metadata">
-<div class="publishedDate">May 10, 2022</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Artificial Inteligence and Mathematical Intuition</h2>
-<div class="dt-tags">
-<div class="dt-tag">Mathematics</div>
-<div class="dt-tag">Artifical Inteligence</div>
-<div class="dt-tag">Intuition</div>
-<div class="dt-tag">Knowledge</div>
-<div class="dt-tag">Human</div>
-</div>
-<p>Is it still mathematics when you use AI for guiding intuition?</p>
-</div>
-</a>
-<a href="posts/welcome_files/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Introduction","Interests"]}</script>
-<div class="metadata">
-<div class="publishedDate">May 10, 2022</div>
-</div>
-<div class="thumbnail">
-<img src="posts/welcome_files/death_socrates.jpeg"/>
-</div>
-<div class="description">
-<h2>Welcome to my blog!</h2>
-<div class="dt-tags">
-<div class="dt-tag">Introduction</div>
-<div class="dt-tag">Interests</div>
-</div>
-<p>Resources and topics I find inspiring regarding all sorts of fields and issues</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(3)</span>
-</li>
-<li>
-<a href="#category:Artifical_Inteligence">Artifical Inteligence</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Human">Human</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Interests">Interests</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Introduction">Introduction</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Intuition">Intuition</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Knowledge">Knowledge</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:Mathematics">Mathematics</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Vanessa di Lego</h1>
@@ -2390,7 +2189,12 @@ text-align: justify}
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/vdilego/vdilego.github.io/issues/new">create an issue</a> on the source repository.</p>
+<h3 id="reuse">Reuse</h3>
+<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/vdilego/vdilego.github.io">https://github.com/vdilego/vdilego.github.io</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
