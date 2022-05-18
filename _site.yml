@@ -49,6 +49,7 @@ base_url: https://vdilego.github.io/
 repository_url: https://github.com/vdilego/vdilego.github.io
 output:
   distill::distill_article:
-    css: custom.css
+    includes:
+      in_header: utterances.html
 creative_commons: CC BY
 
