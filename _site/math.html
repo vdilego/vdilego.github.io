@@ -48,16 +48,17 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 a.sourceLine::before { text-decoration: underline; }
 }
+code span. { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -71,9 +72,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1028,10 +1029,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
   
-  .figure img {
-    width: 100%;
-  }
-  
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1861,6 +1858,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1875,6 +1878,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+  
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+  
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
   
       // clear polling timer
       clearInterval(tid);
@@ -1974,6 +2002,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1996,7 +2026,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
   
@@ -2063,37 +2093,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Vanessa di Lego</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="about.html">About</a>
 <a href="formal-demography.html">Formal Demography</a>
 <a href="covid.html">COVID-19</a>
 <a href="gender-paradox.html">Gender Paradox</a>
+<a href="progress.html">Work in Progress</a>
 <a href="math.html">Math Stuff</a>
 <a href="balzac.html">La Comédie Humaine</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Publications
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="publi_2021.html">2020-2021</a>
-<a href="publi_2019.html">2017-2019</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Blog
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<span class="nav-dropdown-header"></span>
-<span class="nav-dropdown-header"></span>
-<span class="nav-dropdown-header"></span>
-</div>
-</div>
+<span class="nav-dropdown-header">Publications</span>
+<a href="publi.html"></a>
+<a href="posts.html">Posts</a>
+<a href="talks.html">Talks</a>
+<a href="cv.html">CV</a>
 <a href="https://github.com/vdilego">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2139,7 +2153,17 @@ text-align: justify}
 <img src="poly2.png" alt="Source: How to Solve it" /><figcaption>Source: <a href="https://www.amazon.de/-/en/gp/product/0140124993/ref=dbs_a_def_rwt_bibl_vppi_i2">How to Solve it</a></figcaption>
 </figure>
 <p>I will update here posts about some views, readings, and stuff I am working on leisurely. For now, I will just go home with another quote by my friend Albert: “Pure mathematics is, in its way, the poetry of logical ideas”.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<pre><code>                                             - VDL</code></pre>
+<h1 id="kevin-buzzard-on-proof">Kevin Buzzard on Proof</h1>
+<p>In this talk at <a href="https://www.college-de-france.fr/site/timothy-gowers/seminar-2021-11-15-14h00.htm"><strong>Collège de France</strong></a> on November 15, 2021, <a href="https://www.imperial.ac.uk/people/k.buzzard"><strong>Professor and Mathematician Kevin Buzzard</strong></a> prompts the topic of “what is proof?”, within the field of Philosophy of Mathematical Practice.</p>
+<p><a href="https://www.college-de-france.fr/site/timothy-gowers/seminar-2021-11-15-14h00.htm" title="Proof by Kevin Buzzard - Click to Watch!"><img src="proof.png" alt="Proofs" /></a></p>
+<p>He starts provocatively by discussing contradictory results; or what happens when there are papers in respected journals that contradict each other? Arguably, there is a formal definition of mathematical proofs in such a way that every argument is either valid or invalid. So how could there be contradictions?</p>
+<p>One topic he mentions that struck me is connected to the recent rational solutions found to a famously 40-year long difficult mathematical problem <a href="https://www.quantamagazine.org/mathematicians-crack-the-cursed-curve-20171207/"><strong>Cursed Curve</strong></a>. Apparently, it is the equation:</p>
+<p><span class="math display">\[y^4 + 5x^4 − 6x^2y^2 + 6x^3z + 26x^2yz + 10xy^2z − 10y^3z − 32x^2z^2\\ − 40xyz^2 + 24y^2z^2 + 32xz^3 − 16yz^3 = 0\]</span></p>
+<p>(Now you know how to properly curse someone in mathematical language). The issue is that the proof uses a closed-source computer system (magma). How can one call proof something that is closed and difficult to verify by the community at large? There are other problems that he mentions to take stock of the issue of proof itself as a scientific practice and its validity, especifically in a field where this is so essential such as mathematics. Another interesting topic he raises are the differences between human proof and computer proof.</p>
+<p>In my view, I started to think of the role of computational power and programs in how we develop knowledge in other fields. In demography, for instance, increased computer power has definitely enabled to advance so many topics and opened other research avenues. I often feel that we are more and more becoming data scientists and programming has become more essential (I think of me as a graduate student without previous excel use and now I am here writing on the webpage I created using Rstudio and Githhub) for our everyday tasks. As much as I value and consider this an important advancement, I cannot stop but wonder how will computer power shape the way we do, think and interpret research. In an area where we don´t have “cursed curves”, but “live curves”, how can we find a balance where knowledge is traceable? Who is held accountable for producing knowledge that often guides policy and informs important human phenomena?</p>
+<pre><code>                                             - VDL</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2147,6 +2171,15 @@ text-align: justify}
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

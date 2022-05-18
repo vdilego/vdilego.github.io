@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
+  <link rel="alternate" type="application/rss+xml" href="https://vdilego.github.io/Posts.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,29 +87,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Vanessa di Lego: La Comédie humaine</title>
+  <title>Vanessa di Lego: Posts</title>
   
-  <meta property="description" itemprop="description" content="Follow here my current reading project on reading all the books from The Human Comedy, from Honoré Balzac"/>
   
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Vanessa di Lego: La Comédie humaine"/>
+  <meta property="og:title" content="Vanessa di Lego: Posts"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Follow here my current reading project on reading all the books from The Human Comedy, from Honoré Balzac"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Vanessa di Lego"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Vanessa di Lego: La Comédie humaine"/>
-  <meta property="twitter:description" content="Follow here my current reading project on reading all the books from The Human Comedy, from Honoré Balzac"/>
+  <meta property="twitter:title" content="Vanessa di Lego: Posts"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["La Comédie humaine"]},{"type":"character","attributes":{},"value":["Follow here my current reading project on reading all the books from The Human Comedy, from Honoré Balzac"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2079,12 +2077,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body>
+<body class="layout-listing">
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"La Comédie humaine","description":"Follow here my current reading project on reading all the books from The Human Comedy, from Honoré Balzac","authors":[]}
+{"title":"Posts","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2127,24 +2125,234 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
+<!--radix_placeholder_article_listing-->
+
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).on("load", function() {
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      page_category = decodeURIComponent(page_category)
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
+  });
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
+<div class="posts-list">
+<h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
+<a href="posts/10May2022_files/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Mathematics","Artifical Inteligence","Intuition","Knowledge","Human"]}</script>
+<div class="metadata">
+<div class="publishedDate">May 10, 2022</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Artificial Inteligence and Mathematical Intuition</h2>
+<div class="dt-tags">
+<div class="dt-tag">Mathematics</div>
+<div class="dt-tag">Artifical Inteligence</div>
+<div class="dt-tag">Intuition</div>
+<div class="dt-tag">Knowledge</div>
+<div class="dt-tag">Human</div>
+</div>
+<p>Is it still mathematics when you use AI for guiding intuition?</p>
+</div>
+</a>
+<a href="posts/welcome_files/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["Introduction","Interests"]}</script>
+<div class="metadata">
+<div class="publishedDate">May 10, 2022</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Welcome to my blog!</h2>
+<div class="dt-tags">
+<div class="dt-tag">Introduction</div>
+<div class="dt-tag">Interests</div>
+</div>
+<p>Resources and topics I find inspiring regarding all sorts of fields and issues</p>
+</div>
+</a>
+</div>
+<div class="posts-sidebar">
+<div class="sidebar-section categories">
+<h3>Categories</h3>
+<ul>
+<li>
+<a href="#category:Articles">Articles</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:Artifical_Inteligence">Artifical Inteligence</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Human">Human</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Interests">Interests</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Introduction">Introduction</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Intuition">Intuition</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Knowledge">Knowledge</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:Mathematics">Mathematics</a>
+<span class="category-count">(1)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="posts-more">
+<a href="#">More articles &raquo;</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>La Comédie humaine</h1>
+<h1>Posts</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p>Follow here my current reading project on reading all the books from The Human Comedy, from Honoré Balzac</p>
+
 </div>
 
 
 <div class="d-article">
-<figure>
-<img src="balzac_image.jpg" alt="Source: Wikimedia Commons, public domain image" width="70" /><figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Balzac_-_La_Com%C3%A9die_humaine_-_%C3%89ditions_Furne.jpg?uselang=fr">Wikimedia Commons, public domain image</a></figcaption>
-</figure>
-<style>
-body {
-text-align: justify}
-</style>
-<p>The Human Comedy is a vast series of some 90 novels and novellas by <a href="https://pantheon.world/profile/person/Honor%C3%A9_de_Balzac"><strong>Honoré de Balzac</strong></a>, known in the original French as La Comédie Humaine. The books that made up the series were published between 1829 and 1847. There are many orders to read them and a debate among scholars on what order should the books be read. I am following the one suggested by this <a href="https://balzacbooks.wordpress.com/suggested-reading-order-of-the-human-comedy/"><strong>reading group here</strong></a> that used most of the recommendations from William Hobart Royce’s book <a href="http://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=ha001203670"><strong>Balzac as He Should Be Read</strong></a>. I chose this one after a long search due to the fact that the group was more enthusiastic and not so much literary critics. I wanted to have a deeper feeling for French society and institutions in, but, most importantly, I wanted to partake in a long, long, long, reading project. I adore long books, and tend to hold on to stories that unravell slowly and painfully (I know - tough to understand why anyone would like such a thing). Everytime I finish one of these books, however, I feel a tremendous empty feeling (junky vibes anyone?) and was seeking an experience that would allow for a more prolonged feeling of being inside a story and avoid the blues. If you share the same feeling as I do or are just interested in my analysis of each story just stay tuned for more updates on this.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
