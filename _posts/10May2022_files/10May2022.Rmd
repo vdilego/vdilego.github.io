@@ -9,7 +9,6 @@ date: 2022-05-10
 twitter:
   site: "@v_dilego"
   creator: "@v_dilego"
-base_url: https://vdilego.github.io/posts
 categories:
   - Mathematics
   - Artifical Inteligence
@@ -26,21 +25,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r metathis, message=FALSE, warning=FALSE, include=FALSE}
-library(metathis)
-meta() %>%
-  meta_name("github-repo" = "vdilego/vdilego.github.io") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "Machine Learning and Mathematical Intuition",
-    url = "https://vdilego.github.io/posts/2022-05-10-artificial-inteligence-and-mathematical-intuition/",
-    image = "https://vdilego.github.io/posts/2022-05-10-artificial-inteligence-and-mathematical-intuition/knot.jpeg",
-    og_type = "website",
-    og_author = c("di Lego","Vanessa"),
-    twitter_card_type = "summary_large_image",
-    twitter_creator = "@v_dilego"
-  )
-```
+
 
 
 ## Mathematics, Intuition and Artificial Inteligence 

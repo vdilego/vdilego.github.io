@@ -9,7 +9,6 @@ date: 2022-05-10
 twitter:
   site: "@v_dilego"
   creator: "@v_dilego"
-base_url: https://vdilego.github.io/posts
 categories:
   - Introduction
   - Interests
@@ -23,22 +22,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r metathis, message=FALSE, warning=FALSE, include=FALSE}
-library(metathis)
-meta() %>%
-  meta_name("github-repo" = "vdilego/vdilego.github.io") %>%
-  meta_viewport() %>%
-  meta_social(
-    title = "Welcome to my blog!",
-    url = "https://vdilego.github.io/posts/2022-05-10-welcome-to-my-blog/",
-    image = "https://vdilego.github.io/posts/2022-05-10-welcome-to-my-blog/death_socrates.jpeg",
-    image_alt = "The death of Socrates.Painting from the MET Museum",
-    og_type = "website",
-    og_author = c("di Lego","Vanessa"),
-    twitter_card_type = "summary_large_image",
-    twitter_creator = "@v_dilego"
-  )
-```
+
 
 Hello, and welcome to my blog!
 
