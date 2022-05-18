@@ -19,7 +19,17 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+IMAGES_PATH <- here::here(
+    "_posts",
+    "welcome_files")
+```
+
+```{r step-01-03-screenshot, fig.cap="The Death of Socrates. Source: The Met Museum, New York", echo=FALSE, out.extra="class=external", cache=TRUE}
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "death_socrates.jpeg"))
+
 ```
 
 

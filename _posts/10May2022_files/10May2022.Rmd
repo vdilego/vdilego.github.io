@@ -21,10 +21,20 @@ output:
     toc: true
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+IMAGES_PATH <- here::here(
+    "_posts",
+    "10May2022_files")
 ```
 
+```{r step-01-03-screenshot, fig.cap="Knot Theory,Trefoil Knot. Source: Towards Data Science", echo=FALSE, out.extra="class=external", cache=TRUE}
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "knot.gif"))
+
+```
 
 
 
