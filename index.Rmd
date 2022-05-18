@@ -9,6 +9,25 @@ links:
 base_url: https://vdilego.github.io/
 ---
 
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(metathis)
+meta() %>%
+  meta_description(
+    " Welcome to my website. I hope you enjoy it!"
+  ) %>% 
+  meta_name("github-repo" = "vdilego/vdilego.github.io") %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = "The Distillery",
+    url = "https://vdilego.github.io/",
+    og_type = "website",
+    og_author = c("Vanessa di Lego")
+  )
+
+```
+
+
+
 ![Source:
 [The Met Museum, New York](https://www.metmuseum.org/pt/art/collection/search/436105)](death_socrates.jpeg){width=100}
 
