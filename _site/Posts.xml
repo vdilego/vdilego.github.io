@@ -7,7 +7,15 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 10 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>title of post</title>
+      <dc:creator>Vanessa di Lego</dc:creator>
+      <link>https://vdilego.github.io/posts/2022-05-18-title-of-post</link>
+      <description>A short description of the post.</description>
+      <guid>https://vdilego.github.io/posts/2022-05-18-title-of-post</guid>
+      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Artificial Inteligence and Mathematical Intuition</title>
       <dc:creator>Vanessa di Lego</dc:creator>
