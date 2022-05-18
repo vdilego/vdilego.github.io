@@ -3,7 +3,6 @@ title: "Vanessa di Lego"
 description: |
   My Website
 output_dir: "."
-base_url: https://vdilego.github.io/
 navbar:
   right:
     - text: "About"
@@ -36,6 +35,8 @@ navbar:
       href: https://twitter.com/v_dilego
     - icon: far fa-address-card
       href: "mailto:Vanessa.DiLego@oeaw.ac.at"
+  source_url: https://github.com/vdilego/vdilego.github.io
+  search: true
 collections:
   posts:
     categories: true
@@ -44,4 +45,12 @@ collections:
     feed_iems_max: 20
     disqus: reproducible-finance-with-r
     share: [twitter, linkedin]
-output: distill::distill_article
+base_url: https://vdilego.github.io/
+repository_url: https://github.com/vdilego/vdilego.github.io
+output:
+  distill::distill_article:
+    css: custom.css
+    includes:
+      in_header: utterances.html
+creative_commons: CC BY
+
