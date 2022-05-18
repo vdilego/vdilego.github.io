@@ -42,4 +42,6 @@ collections:
     categories_metadata: true
     authors_metadata: false
     feed_iems_max: 20
+    disqus: reproducible-finance-with-r
+    share: [twitter, linkedin]
 output: distill::distill_article

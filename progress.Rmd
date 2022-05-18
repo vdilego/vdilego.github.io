@@ -3,6 +3,7 @@ title: "Work in Progress"
 description: |
   Follow here my ideas and projects that are currently under development or review
 bibliography: HEALTH SENSITIVITY-TECHNIQUE-Ressucitation.bib
+base_url: https://vdilego.github.io/
 ---
 
 ![Source:Own elaboration](surv_res_fra_2.jpeg){width=30}

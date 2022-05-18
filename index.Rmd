@@ -2,11 +2,8 @@
 title: "Vanessa di Lego"
 description: |
   Welcome to my website. I hope you enjoy it!
-site: distill::distill_website
-links:
-  - label: Posts
-    url: "posts.html"
 base_url: https://vdilego.github.io/
+site: distill::distill_website
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}

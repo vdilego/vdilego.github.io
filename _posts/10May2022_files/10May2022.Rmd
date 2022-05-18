@@ -4,7 +4,6 @@ description: |
   Is it still mathematics when you use AI for guiding intuition?
 author:
   - name: Vanessa di Lego
-    url: https://twitter.com/v_dilego
 date: 2022-05-10
 twitter:
   site: "@v_dilego"
