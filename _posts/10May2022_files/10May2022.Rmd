@@ -1,5 +1,5 @@
 ---
-date: "2022-05-10"
+date: "2022-05-30"
 title: "Artificial Inteligence and Mathematical Intuition"
 description: |
   Is it still mathematics when you use AI for guiding intuition?
@@ -15,7 +15,6 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-    toc_float: true
 ---
 
 
@@ -45,7 +44,7 @@ However, as much as I value and consider this an important advancement, I cannot
 
 ### What is Mathematics?
 
-Let´s start first with what is Mathematics and how could the use of AI or machine learning tools affect the very concept of the field. 
+Let´s start first with what is Mathematics and how could the use of AI or machine learning tools affect the very concept of the field. If you want to go deep, read this entry at the [**Stanford Encyclopedia of Philosophy**](https://plato.stanford.edu/entries/philosophy-mathematics/) to have more details and references.
 
 ### What is Intuition for Mathematicians?
 
