@@ -22,7 +22,7 @@ navbar:
     - text: "Publications"
     - href: publi.html
     - text: "Posts"
-      href: posts.html
+      href: Posts.html
     - text: "Talks"
       href: talks.html
     - text: "CV"
