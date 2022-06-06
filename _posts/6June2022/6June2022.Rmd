@@ -1,0 +1,209 @@
+---
+date: "2022-06-06"
+title: "Building a Hex Sticker using the HexSticker package"
+description: |
+  A simple tutorial on making a hex sticker
+base_url: https://vdilego.github.io/
+author: "Vanessa di Lego"
+categories:
+  - Rstudio
+  - HexSticker
+  - Tennis
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+IMAGES_PATH <- here::here(
+    "_posts",
+    "6June2022")
+```
+
+```{r step-01-03-screenshot, fig.cap="Knot Theory,Trefoil Knot. Source: Towards Data Science", echo=FALSE, out.extra="class=external", cache=TRUE}
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "tennis.gif"))
+
+```
+
+
+
+### R is very much like tennis... precise, beautiful, plastic 
+
+... and also painfully fun
+![](https://media.giphy.com/media/AHEMa5JNGFmzS/giphy.gif)]
+
+
+In this short tutorial, we will learn how to make a cool hex sticker for your project, package or simply for fun.
+
+## Let´s do this!
+
+
+![](https://media.giphy.com/media/ZwBnkS8W4HXCDRvevm/giphy.gif)
+
+
+- The image for the sticker can come from an online source, be developed within R or simply designed in any other platform and read in for the sticker
+
+Some packages are essential to install:
+
+```{r pck, eval=FALSE, warning=F, comment=F}
+library(ggplot2) #for lots
+library(gplots) #for heatmaps
+library(RColorBrewer) #for palettes
+library(tidyverse) # for data wrangling
+library(dplyr) #for dataset manipulation
+library(knitr) #for neaty dataset printing
+library(timelineS) #for timeline plot
+library(circlize) #for chord-diagrams
+library(fmsb) #for radar plots
+library(here) # for setting environment project
+library(data.table) # for fast reading data and functions
+library(hexSticker) # the hexsticker package
+
+```
+
+Check the [**hexSticker**](https://github.com/GuangchuangYu/hexSticker) github repository for nice examples and some troubleshoot.
+
+## Example 1: For base R users/graphs using lattice
+
+```{r ex1, warning=F,comment=F}
+
+library(hexSticker)
+library(lattice)
+library(here)
+
+counts <- c(18,17,15,20,10,20,25,13,12)
+outcome <- gl(3,1,9)
+treatment <- gl(3,3)
+bwplot <- bwplot(counts ~ outcome | treatment, xlab=NULL, ylab=NULL, cex=.5,
+                 scales=list(cex=.5), par.strip.text=list(cex=.5))
+sticker(bwplot, package="hexSticker", p_size=20, s_x=1.05, s_y=.8, s_width=2, s_height=1.5,
+        h_fill="#f9690e", h_color="#f39c12",filename=here("Figures","ex1.png"))
+
+```
+
+
+```{r, echo=F, fig.align='center', message=FALSE, warning=FALSE, out.width="70%",cache=F}
+
+library(here)
+library(knitr)
+
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "ex1.png"))
+
+```
+
+
+## Example 2: For Rstudio users/graphs using ggplot
+
+
+```{r ex2, message=FALSE, warning=FALSE}
+
+library(ggplot2)
+library(here)
+
+p <- ggplot(aes(x = mpg, y = wt), data = mtcars) + geom_point()
+p <- p + theme_void() + theme_transparent()
+
+sticker(p, package="hexSticker", p_size=20, s_x=1, s_y=.75, s_width=1.3, s_height=1,filename=here("Figures","ex2.png"))
+
+```
+
+
+```{r, echo=F, fig.align='center', message=FALSE, warning=FALSE, out.width="70%",cache=F}
+
+library(here)
+library(knitr)
+
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "ex2.png"))
+
+```
+
+# Example 3: Using any figure or image!
+
+After you save an image or have a specific design you can simply use this image for your sticker:
+```{r ex3, message=FALSE, warning=FALSE}
+library(here)
+library(knitr)
+## Example 3: For figures already done
+
+
+sticker(here("Figures","beethoven.jpg"), package="hexThoven", p_size=20, s_x=1, s_y=.75, s_width=.6,filename=here("Figures","ex3.png"), h_color="darkred", h_fill="darkgrey")
+```
+
+
+```{r, echo=F, fig.align='center', message=FALSE, warning=FALSE, out.width="70%",cache=F}
+
+library(here)
+library(knitr)
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "ex3.png"))
+
+
+```
+
+![](https://media.giphy.com/media/Yl5nlnrtpQIrI1AfhD/giphy.gif)
+
+### Now let´s try to use some tennis data!
+
+All the data on ranking comes from the [data science](https://datascienceplus.com/) and their tennis matches data on grand slams.
+
+```{r dt1, eval=FALSE,message=FALSE, warning=FALSE}
+
+library_toload <- c("dplyr", "knitr", "ggplot2", "gplots", "RColorBrewer", "timelineS", "circlize", "fmsb")
+invisible(lapply(library_toload, function(x) {suppressPackageStartupMessages(library(x, character.only=TRUE))}))
+
+url_file <- "https://datascienceplus.com/wp-content/uploads/2017/04/tennis-grand-slam-winners.txt"
+slam_win <- read.delim(url(url_file), sep="\t", stringsAsFactors = FALSE)
+
+slam_win$YEAR_DATE <- as.Date(mapply(year_to_date_trnm, slam_win$YEAR, slam_win$TOURNAMENT), format="%Y-%m-%d")
+kable(head(slam_win, 10))
+
+```
+
+We have the top 10 winners of grand slams by tournament type in 2017
+
+```{r dt2, echo=F,message=FALSE, warning=FALSE}
+
+library_toload <- c("dplyr", "knitr", "ggplot2", "gplots", "RColorBrewer", "timelineS", "circlize", "fmsb")
+invisible(lapply(library_toload, function(x) {suppressPackageStartupMessages(library(x, character.only=TRUE))}))
+
+url_file <- "https://datascienceplus.com/wp-content/uploads/2017/04/tennis-grand-slam-winners.txt"
+slam_win <- read.delim(url(url_file), sep="\t", stringsAsFactors = FALSE)
+
+slam_win[grep("Australian Open", slam_win$TOURNAMENT), "TOURNAMENT"] = "Australian Open"
+
+year_to_date_trnm <- function(the_year, the_trnm) {
+  the_date <- NULL
+  if (the_trnm == "Australian Open") {
+    the_date <- (paste(the_year, "-01-31", sep=""))
+  } else if (the_trnm == "French Open") {
+    the_date <- (paste(the_year, "-06-15", sep=""))
+  } else if (the_trnm == "Wimbledon") {
+    the_date <- (paste(the_year, "-07-15", sep=""))
+  } else if (the_trnm == "U.S. Open") {
+    the_date <- (paste(the_year, "-09-07", sep=""))
+  }
+  the_date
+}
+
+slam_win$YEAR_DATE <- as.Date(mapply(year_to_date_trnm, slam_win$YEAR, slam_win$TOURNAMENT), format="%Y-%m-%d")
+kable(head(slam_win, 10))
+
+```
+
+![](https://media.giphy.com/media/4Nvg2jmFkhZr0Gngjk/giphy.gif)
+
+--VDL
+
+
+
+
