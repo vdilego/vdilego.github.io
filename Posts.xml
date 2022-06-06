@@ -7,14 +7,18 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 18 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>title of post</title>
+      <title>Building a Hex Sticker using the HexSticker package</title>
       <dc:creator>Vanessa di Lego</dc:creator>
-      <link>https://vdilego.github.io/posts/2022-05-18-title-of-post</link>
-      <description>A short description of the post.</description>
-      <guid>https://vdilego.github.io/posts/2022-05-18-title-of-post</guid>
-      <pubDate>Wed, 18 May 2022 00:00:00 +0000</pubDate>
+      <link>https://vdilego.github.io/posts/6June2022</link>
+      <description>A simple tutorial on making a hex sticker</description>
+      <category>Rstudio</category>
+      <category>HexSticker</category>
+      <category>Tennis</category>
+      <guid>https://vdilego.github.io/posts/6June2022</guid>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://vdilego.github.io/posts/6June2022/ex1.png" medium="image" type="image/png" width="518" height="600"/>
     </item>
     <item>
       <title>Artificial Inteligence and Mathematical Intuition</title>

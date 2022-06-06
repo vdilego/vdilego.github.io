@@ -23,7 +23,7 @@ IMAGES_PATH <- here::here(
     "6June2022")
 ```
 
-```{r step-01-03-screenshot, fig.cap="Knot Theory,Trefoil Knot. Source: Towards Data Science", echo=FALSE, out.extra="class=external", cache=TRUE}
+```{r step-01-03-screenshot, fig.cap="The Beauty of Tennis. Source: https://giphy.com/search/tennis", echo=FALSE, out.extra="class=external", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "tennis.gif"))
@@ -35,7 +35,7 @@ knitr::include_graphics(path =
 ### R is very much like tennis... precise, beautiful, plastic 
 
 ... and also painfully fun
-![](https://media.giphy.com/media/AHEMa5JNGFmzS/giphy.gif)]
+![](https://media.giphy.com/media/AHEMa5JNGFmzS/giphy.gif)
 
 
 In this short tutorial, we will learn how to make a cool hex sticker for your project, package or simply for fun.
@@ -50,7 +50,7 @@ In this short tutorial, we will learn how to make a cool hex sticker for your pr
 
 Some packages are essential to install:
 
-```{r pck, eval=FALSE, warning=F, comment=F}
+```{r pck, eval=FALSE, warning=F, comment=F,echo=T}
 library(ggplot2) #for lots
 library(gplots) #for heatmaps
 library(RColorBrewer) #for palettes
@@ -70,7 +70,7 @@ Check the [**hexSticker**](https://github.com/GuangchuangYu/hexSticker) github r
 
 ## Example 1: For base R users/graphs using lattice
 
-```{r ex1, warning=F,comment=F}
+```{r ex1, warning=F, eval=F, echo=T}
 
 library(hexSticker)
 library(lattice)
@@ -102,7 +102,7 @@ knitr::include_graphics(path =
 ## Example 2: For Rstudio users/graphs using ggplot
 
 
-```{r ex2, message=FALSE, warning=FALSE}
+```{r ex2, message=FALSE, warning=FALSE, eval=F, echo=T}
 
 library(ggplot2)
 library(here)
@@ -128,8 +128,9 @@ knitr::include_graphics(path =
 
 # Example 3: Using any figure or image!
 
-After you save an image or have a specific design you can simply use this image for your sticker:
-```{r ex3, message=FALSE, warning=FALSE}
+- After you save an image or have a specific design you can simply use this image for your sticker:
+
+```{r ex3, message=FALSE, warning=FALSE, eval=F, echo=T}
 library(here)
 library(knitr)
 ## Example 3: For figures already done
@@ -156,7 +157,7 @@ knitr::include_graphics(path =
 
 All the data on ranking comes from the [data science](https://datascienceplus.com/) and their tennis matches data on grand slams.
 
-```{r dt1, eval=FALSE,message=FALSE, warning=FALSE}
+```{r dt1, eval=FALSE,message=FALSE, warning=FALSE, echo=T}
 
 library_toload <- c("dplyr", "knitr", "ggplot2", "gplots", "RColorBrewer", "timelineS", "circlize", "fmsb")
 invisible(lapply(library_toload, function(x) {suppressPackageStartupMessages(library(x, character.only=TRUE))}))
@@ -201,6 +202,203 @@ kable(head(slam_win, 10))
 ```
 
 ![](https://media.giphy.com/media/4Nvg2jmFkhZr0Gngjk/giphy.gif)
+
+
+I wanted to create a sticker that reflected the [**GOATs**](https://bleacherreport.com/articles/786507-tennis-goat-debate-roger-federer-trumps-rafael-nadal-as-us-open-looms) - or the Greatest of All Time. There is a huge debate on this and currently the axis Roger Federer - Rafael Nadal - Novak Djokovic is the most celebrated of the GOAT. To create the sticker, I wanted to make a stlyzed graph that reflected the relationship between tournament type and each player. This is because there is widespread consensus that Nadal is best in Clay courts while Djokovic is best in Slow hard courts and Federer in hard and fast courts (see discussion [**here**](https://www.latimes.com/projects/la-sp-tennis-court-surfaces/)). In a way, they are GOATS of their courts. But there is a debate on this point.
+
+Using the data on the top winners of all time in 2017 we recreated the sticker using the following code, adapated from [**here**](https://datascienceplus.com/visualizing-tennis-grand-slam-winners-performances/)
+:
+
+```{r, eval=F, echo=T}
+# top 4 winners
+
+slam_top_chart$WINNER <- factor(slam_top_chart$WINNER, levels = slam_top_chart$WINNER[order(slam_top_chart$NUM_WINS)])
+top_winners_gt4 <- slam_top_chart %>%
+  filter(NUM_WINS >= 4)
+
+# top winners by player and tournament
+slam_top_chart_by_trn <-slam_win %>%
+  filter(WINNER %in% top_winners_gt4$WINNER) %>%
+  group_by(TOURNAMENT, WINNER) %>%
+  summarise(NUM_WINS=n()) %>%
+  arrange(desc(NUM_WINS))
+
+# ploting top 10
+slam_top_chart_by_trn$NUM_WINS <- factor(slam_top_chart_by_trn$NUM_WINS)
+kable(head(slam_top_chart_by_trn, 10))
+
+
+
+p_hex<-ggplot(slam_top_chart_by_trn%>% filter(WINNER%in%c("Rafael Nadal",
+                                                    "Novak Djokovic",
+                                                    "Roger Federer")),
+       aes(TOURNAMENT,NUM_WINS, color=WINNER, group=WINNER))+
+  geom_line(size = 0.8)+
+  geom_text_repel(aes(label = WINNER),
+                  data = slam_top_chart_by_trn%>%
+                    filter(WINNER%in%c("Rafael Nadal",
+                                       "Novak Djokovic",
+                                       "Roger Federer") &
+                  TOURNAMENT %in%c("Wimbledon")),
+                  size = 5,
+                  hjust = 1,
+                  vjust = 0.5,
+                  nudge_x = 0.7,
+                  nudge_y = 0.5,
+                  force=2,
+                  point.padding = 1,
+                  lineheight = 2)+
+scale_color_manual(values = c("#845EC2","#AF5D00","#008C81"), name="Players")+
+  theme_void()+
+  theme_transparent()+
+  theme(axis.title = element_blank(),
+        legend.position = "none")
+
+## Loading Google fonts (http://www.google.com/fonts)
+font_add_google("Gochi Hand", "gochi")
+
+sticker(p_hex, package="GOAT", p_size=16, s_x=1.08, s_y=0.8, s_width=1.5, s_height=1,
+        filename=here("Figures","st_1.png"), h_fill="#B0A8B9", h_color="#f39c12",
+        p_color = "#926C00")
+
+
+```
+
+
+Which generates this sticker:
+
+```{r, echo=F, fig.align='center', message=FALSE, warning=FALSE, out.width="70%",cache=F}
+
+library(here)
+library(knitr)
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "st_1.png"))
+
+
+```
+
+
+## Mental Toughness
+
+I was also curious to use data on Mental Toughness. One important preditor of being a winner in tennis is your mental toughness. This is a rating that compares players in pressure situations:
+
+$$Mental Toughness Rating = \frac{Mental Points Won}{Mental Points Lost}$$
+Mental Points are weighted pressure situations: 
+Mental Point = 2* Best-of-3 Deciding Set + 4 * Best-of-5 Deciding Set + 2 * Final Match + Non-Deciding Set Tie-Break + 2 * Deciding Set Tie Break
+
+Data on mental toughness was downloaded [**here**](https://www.ultimatetennisstatistics.com/mentalToughness). 
+
+
+```{r, eval=F, message=FALSE, warning=FALSE, echo=T}
+
+library(data.table)
+library(here)
+library(dplyr)
+mt<-fread(here("Data","MentalToughness.csv"))
+
+```
+
+![](https://media.giphy.com/media/FtanAYyYWjFyU7bPBf/giphy.gif)
+
+
+```{r echo=FALSE,message=FALSE, warning=FALSE}
+library(data.table)
+library(here)
+library(dplyr)
+mt<-fread(here("_posts","6June2022","MentalToughness.csv"))
+
+mt<-mt %>% 
+  select(1:3,6) 
+
+kable(head(mt, 10))
+
+
+```
+
+Indeed, we can see from the table that Djokovic, represented in the map by Serbia, has the highest score on mental toughness. well...not always, though
+
+
+![](https://media.giphy.com/media/fMzhBp1medVHV1ceOJ/giphy.gif)
+
+
+I wanted to build a stylized map with the score.
+
+```{r, eval=F, echo=T}
+# let´s do a sticker on mental toughness
+
+mt<-mt %>%
+mutate(iso3=countrycode(country_name, origin="country.name",destination =  "iso3c"))
+
+# grabbing world data
+
+data(World)
+
+# checking coordinate system
+
+st_crs(World)
+
+#changing to Robinson system
+
+world_rob<-st_transform(World, "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs")
+
+#checking again coordinates
+
+st_crs(world_rob)
+
+# joining data with shape file
+
+setnames(world_rob, "iso_a3", "ISO3")
+mt_map<-left_join(mt, world_rob, by="ISO3")
+
+st_geometry(mt_map) <- mt_map$geometry
+
+map_m <- ggplot()+
+  geom_sf(data = mt_map %>% filter(continent%in%"Europe" & !ISO3%in%"RUS"),
+          mapping = aes(fill = rating),
+          color = "white", size = 0.1) +
+  theme_minimal()+
+  scale_fill_viridis_c(option="magma")+
+  theme(axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.line = element_blank(),
+      legend.key.height = unit(0.3, 'cm'),
+      legend.key.size = unit(0.1, 'cm'))
+
+map_hex<-ggdraw(map_m)
+
+sticker(map_hex, package="MENTAL", p_size=20, s_x=1.08, s_y=0.94, s_width=2, s_height=1.4,
+        filename=here("Figures","map.png"), h_fill="#B0A8B9", h_color="#f39c12",
+        p_color = "black")
+
+```
+
+Here is the end:
+
+```{r, echo=F, fig.align='center', message=FALSE, warning=FALSE, out.width="70%",cache=F}
+
+library(here)
+library(knitr)
+knitr::include_graphics(path =
+                            fs::path(IMAGES_PATH,
+                                     "map.png"))
+
+
+```
+
+## Ready to Play??
+
+Enjoy! Check my presentation [**here**](https://vdilego.github.io/Hex_Present/#1) and download the codes from the [**github repo**](https://github.com/vdilego/hexSticker)
+
+When all fails, appeal to online [**sticker making**](https://connect.thinkr.fr/hexmake/)
+
+To order your stickers, check out this [**site**](https://www.stickermule.com/uses/hexagon-stickers)
+
+The size and dimension of the stickers as produced by the [**hexSticker**](https://github.com/GuangchuangYu/hexSticker) package are the ones established [**here**](http://hexb.in/sticker.html)
+
+![](https://i.gifer.com/3sUf.gif)
+
 
 --VDL
 
