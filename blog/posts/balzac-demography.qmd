@@ -1,0 +1,12 @@
+---
+title: "La Comédie Humaine: a demographer reads Balzac"
+date: 2024-03-01
+categories: [literature, demography]
+description: "Reading all 91 novels of La Comédie Humaine through a demographic lens — mortality, class, and the life course in 19th-century France."
+---
+
+Honoré de Balzac's *La Comédie Humaine* is an extraordinary attempt to catalogue an entire society — 91 novels, over 2,000 recurring characters, spanning the social strata of Restoration and July Monarchy France. For a demographer, it is an irresistible document.
+
+This is an ongoing reading project. Notes will appear here as I work through the novels, with attention to mortality, social mobility, the life course, and what Balzac's obsessive documentation of wealth, debt, and death can tell us about demographic structures we now measure formally.
+
+*More posts to follow.*

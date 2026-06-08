@@ -1,0 +1,496 @@
+/*-- scss:defaults --*/
+
+// Fonts
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-serif: "Lora", "Georgia", serif;
+$font-size-base: 1rem;
+$line-height-base: 1.75;
+
+// Colours
+$body-bg: #ffffff;
+$body-color: #1a1a1a;
+$link-color: #1a5276;
+$link-hover-color: #1a3d5c;
+$primary: #1a5276;
+$secondary: #6c757d;
+
+// Navbar
+$navbar-bg: #ffffff;
+$navbar-fg: #1a1a1a;
+$navbar-hl: #1a5276;
+
+// Headings
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;
+$headings-color: #111111;
+$headings-line-height: 1.25;
+
+/*-- scss:rules --*/
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+// ——————————————————————————————
+// NAVBAR
+// ——————————————————————————————
+.navbar {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0.6rem 0;
+  font-family: $font-family-sans-serif;
+}
+
+.navbar-brand {
+  font-family: $font-family-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #111 !important;
+  letter-spacing: 0.01em;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #444 !important;
+  padding: 0.35rem 0.8rem;
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: $primary !important;
+}
+
+// ——————————————————————————————
+// HERO / HOME LAYOUT
+// ——————————————————————————————
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem 0 3.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 3rem;
+}
+
+.hero-text h1 {
+  font-family: $font-family-serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #111;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 em {
+  font-style: italic;
+  color: $primary;
+}
+
+.hero-role {
+  font-family: $font-family-sans-serif;
+  font-size: 0.875rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.hero-text p.lead {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 300;
+  max-width: 560px;
+}
+
+.hero-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-links a {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $primary;
+  text-decoration: none;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid #c5d8e8;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.hero-links a:hover {
+  background: $primary;
+  color: white;
+  border-color: $primary;
+}
+
+.hero-photo img {
+  width: 100%;
+  border-radius: 4px;
+  filter: grayscale(8%);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.hero-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #e8edf2;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #8a9ab0;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: $font-family-sans-serif;
+}
+
+// ——————————————————————————————
+// SECTION HEADINGS
+// ——————————————————————————————
+.section-heading {
+  font-family: $font-family-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 0.25rem;
+}
+
+.section-rule {
+  width: 40px;
+  height: 2px;
+  background: $primary;
+  border: none;
+  margin: 0.75rem 0 2rem;
+}
+
+// ——————————————————————————————
+// PUBLICATION LIST
+// ——————————————————————————————
+.pub-year-heading {
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $primary;
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pub-title {
+  font-family: $font-family-serif;
+  font-size: 0.97rem;
+  line-height: 1.55;
+  color: #111;
+  margin-bottom: 0.2rem;
+}
+
+.pub-title a {
+  color: #111;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  color: $primary;
+}
+
+.pub-authors {
+  font-size: 0.82rem;
+  color: #666;
+  font-weight: 300;
+  margin-bottom: 0.15rem;
+}
+
+.pub-journal {
+  font-size: 0.82rem;
+  color: #555;
+  font-style: italic;
+}
+
+.pub-tag {
+  font-family: $font-family-sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $primary;
+  border: 1px solid #c5d8e8;
+  border-radius: 2px;
+  padding: 0.15rem 0.55rem;
+  white-space: nowrap;
+  align-self: start;
+  margin-top: 0.1rem;
+}
+
+// ——————————————————————————————
+// RESEARCH CARDS
+// ——————————————————————————————
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  margin: 0 0 2rem;
+}
+
+.research-card {
+  background: #fff;
+  padding: 1.75rem;
+  transition: background 0.15s;
+}
+
+.research-card:hover {
+  background: #f7f9fb;
+}
+
+.research-card-label {
+  font-family: $font-family-sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 0.5rem;
+}
+
+.research-card h3 {
+  font-family: $font-family-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.6rem;
+}
+
+.research-card p {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.65;
+  font-weight: 300;
+  margin: 0;
+}
+
+// ——————————————————————————————
+// TEACHING ENTRIES
+// ——————————————————————————————
+.teaching-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.teaching-label {
+  font-family: $font-family-sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 0.3rem;
+}
+
+.teaching-entry h3 {
+  font-family: $font-family-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.teaching-entry p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+// ——————————————————————————————
+// TALKS ENTRIES
+// ——————————————————————————————
+.talk-entry {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.talk-year {
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $primary;
+  letter-spacing: 0.05em;
+  padding-top: 0.15rem;
+}
+
+.talk-entry h4 {
+  font-family: $font-family-serif;
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 0.2rem;
+}
+
+.talk-entry p {
+  font-size: 0.82rem;
+  color: #666;
+  margin: 0;
+  font-weight: 300;
+}
+
+// ——————————————————————————————
+// ABOUT PAGE
+// ——————————————————————————————
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 3rem;
+}
+
+.about-sidebar-block {
+  margin-bottom: 2rem;
+}
+
+.about-sidebar-label {
+  font-family: $font-family-sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.about-sidebar-item {
+  font-size: 0.875rem;
+  color: #444;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-family: $font-family-sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primary;
+  border: 1px solid #c5d8e8;
+  border-radius: 2px;
+  padding: 0.2rem 0.6rem;
+}
+
+// ——————————————————————————————
+// BLOG INDEX
+// ——————————————————————————————
+.post-entry {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.post-date {
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 0.35rem;
+}
+
+.post-entry h3 {
+  font-family: $font-family-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 0.4rem;
+}
+
+.post-entry h3 a {
+  color: #111;
+  text-decoration: none;
+}
+
+.post-entry h3 a:hover {
+  color: $primary;
+}
+
+.post-entry p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+// ——————————————————————————————
+// RECENT PUBS on HOMEPAGE
+// ——————————————————————————————
+.recent-section-label {
+  font-family: $font-family-sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+// ——————————————————————————————
+// RESPONSIVE
+// ——————————————————————————————
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+  .hero-photo { display: none; }
+  .research-grid { grid-template-columns: 1fr; }
+  .about-layout { grid-template-columns: 1fr; }
+  .pub-entry { grid-template-columns: 1fr; }
+}
+
+// ——————————————————————————————
+// MISC
+// ——————————————————————————————
+a { color: $primary; }
+a:hover { color: $link-hover-color; }
+
+.quarto-title { display: none; }
+
+footer.nav-footer {
+  border-top: 1px solid #e8e8e8;
+  font-size: 0.8rem;
+  color: #888;
+  font-family: $font-family-sans-serif;
+  padding: 1.25rem 0;
+}

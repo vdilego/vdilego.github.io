@@ -1,0 +1,78 @@
+---
+title: "Vanessa Di Lego"
+page-layout: full
+toc: false
+---
+
+<div class="hero-section">
+<div class="hero-text">
+
+# Vanessa <em>Di Lego</em>
+
+<p class="hero-role">
+Professor of Demography · Departamento de Demografia, Cedeplar/FACE/UFMG<br>
+<a href="https://cedeplar.ufmg.br/pos-graduacao/demografia#professores-e-pesquisadores" style="color:#1a5276;font-size:0.8rem;">Universidade Federal de Minas Gerais</a>
+</p>
+
+<p class="lead">
+I work at the intersection of formal demography, mortality methodology, and gender — asking how we measure health and longevity, and for whom the numbers hold.
+My current research focuses on lifespan variability and inequality, estimation sensitivity in health expectancy, and gender gaps in mortality and morbidity.
+</p>
+
+<div class="hero-links">
+<a href="https://github.com/vdilego">GitHub</a>
+<a href="https://www.linkedin.com/in/vanessa-di-lego-51070274/">LinkedIn</a>
+<a href="https://bsky.app/profile/vdilego.bsky.social">Bluesky</a>
+<a href="https://twitter.com/v_dilego">Twitter/X</a>
+<a href="mailto:vdilego@cedeplar.ufmg.br">Email</a>
+<a href="cv.qmd">CV</a>
+</div>
+
+</div>
+<div class="hero-photo">
+  <img src="photo_me.jpg" alt="Vanessa Di Lego" onerror="this.style.display='none';document.getElementById('photo-placeholder').style.display='flex';" />
+  <div id="photo-placeholder" class="hero-photo-placeholder" style="display:none;">photo_me.jpg</div>
+</div>
+</div>
+
+---
+
+<span class="recent-section-label">Selected recent work</span>
+
+<div class="pub-entry" style="border-top:1px solid #f0f0f0;">
+<div>
+<p class="pub-title"><a href="https://link.springer.com/article/10.1007/s10654-025-01346-2">Why do women live longer than men, but spend more time in poor health? A decomposition analysis of the gender gap in unhealthy life years across Europe</a></p>
+<p class="pub-authors">Muszyńska-Spielauer, M., Minagawa, Y., Di Giulio, P. & <strong>Di Lego, V.</strong></p>
+<p class="pub-journal">European Journal of Epidemiology, 2026</p>
+</div>
+<span class="pub-tag">Gender</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="#">Mismatches in Health: A Global Analysis of Discrepancies Between Self-Reported and Tested Mobility and Cognition</a></p>
+<p class="pub-authors"><strong>Di Lego, V.</strong>, Spitzer, S. & Lazarevič, P.</p>
+<p class="pub-journal">Comparative Population Studies, v. 49, 2024</p>
+</div>
+<span class="pub-tag">Health</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="#">Uncovering the gender health data gap</a></p>
+<p class="pub-authors"><strong>Di Lego, V.</strong></p>
+<p class="pub-journal">Cadernos de Saúde Pública, v. 39, 2023</p>
+</div>
+<span class="pub-tag">Gender</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S1201971222001977">The impact of COVID-19 vaccines on the Case Fatality Rate: The importance of monitoring breakthrough infections</a></p>
+<p class="pub-authors"><strong>Di Lego, V.</strong>, Sanchez-Romero, M. & Fürnkranz-Prskawetz, A.</p>
+<p class="pub-journal">International Journal of Infectious Diseases, 2022</p>
+</div>
+<span class="pub-tag">COVID-19</span>
+</div>
+
+<p style="margin-top:1.5rem;"><a href="publications.qmd" style="font-size:0.875rem;font-weight:500;">View all publications →</a></p>

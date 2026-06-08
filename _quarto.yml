@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Vanessa Di Lego"
+  favicon: favicon.ico
+  site-url: https://vdilego.github.io
+  description: "Professor of Demography — Cedeplar/FACE/UFMG"
+
+  navbar:
+    left:
+      - text: "Vanessa Di Lego"
+        href: index.qmd
+        style: "font-weight:600;"
+    right:
+      - text: "About"
+        href: about.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Talks"
+        href: talks.qmd
+      - text: "CV"
+        href: cv.qmd
+    tools:
+      - icon: github
+        href: https://github.com/vdilego
+      - icon: twitter
+        href: https://twitter.com/v_dilego
+      - icon: linkedin
+        href: https://www.linkedin.com/in/vanessa-di-lego-51070274/
+
+  page-footer:
+    left: "© Vanessa Di Lego · Cedeplar/FACE/UFMG"
+    right:
+      - text: "Source"
+        href: https://github.com/vdilego/vdilego.github.io
+      - text: "CC BY 4.0"
+        href: https://creativecommons.org/licenses/by/4.0/
+
+format:
+  html:
+    theme:
+      - flatly
+      - custom.scss
+    css: styles.css
+    toc: false
+    code-link: true
+    smooth-scroll: true
+    include-in-header: analytics.html
+
+execute:
+  freeze: auto

@@ -1,0 +1,17 @@
+---
+title: "Blog"
+toc: false
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  fields: [date, title, categories, description]
+---
+
+<h2 class="section-heading">Blog & Notes</h2>
+<hr class="section-rule">
+
+<p style="font-size:0.95rem;color:#444;line-height:1.8;max-width:680px;margin-bottom:2rem;">
+A mix of methodological notes, R tutorials, and occasional essays — on formal demography, mortality estimation, and questions at the boundary of science and philosophy. The Balzac project (reading all 91 novels of <em>La Comédie Humaine</em> through a demographic lens) also lives here.
+</p>

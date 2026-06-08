@@ -1,0 +1,189 @@
+---
+title: "Publications"
+toc: false
+---
+
+<h2 class="section-heading">Publications</h2>
+<hr class="section-rule">
+
+<p style="font-size:0.875rem;color:#666;margin-bottom:0.5rem;">
+See also: <a href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4434755J6">Lattes CV</a> · <a href="https://scholar.google.com/scholar?q=Vanessa+Di+Lego">Google Scholar</a> · <a href="https://www.escavador.com/sobre/7153212/vanessa-gabrielle-di-lego-goncalves">Escavador</a>
+</p>
+
+---
+
+<p class="pub-year-heading">2026</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://link.springer.com/article/10.1007/s10654-025-01346-2">Why do women live longer than men, but spend more time in poor health? A decomposition analysis of the gender gap in unhealthy life years across Europe</a></p>
+<p class="pub-authors">Muszyńska-Spielauer, M., Minagawa, Y., Di Giulio, P. & <strong>Di Lego, V.</strong></p>
+<p class="pub-journal">European Journal of Epidemiology</p>
+</div>
+<span class="pub-tag">Gender</span>
+</div>
+
+---
+
+<p class="pub-year-heading">2024</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title">Mismatches in Health: A Global Analysis of Discrepancies Between Self-Reported and Tested Mobility and Cognition</p>
+<p class="pub-authors"><strong>Di Lego, V.</strong>, Spitzer, S. & Lazarevič, P.</p>
+<p class="pub-journal">Comparative Population Studies, v. 49, p. 181–214</p>
+</div>
+<span class="pub-tag">Health</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title">Decrease in healthy life expectancy in German federal states 2009–2017: Association between chronic conditions, demographic structures and healthy life expectancy</p>
+<p class="pub-authors">Tetzlaff, F., Nowossadeck, E., Epping, J., <strong>Di Lego, V.</strong>, Muszynska-Spielauer, M., Beller, J., Sperlich, S. & Tetzlaff, J.</p>
+<p class="pub-journal">European Journal of Public Health</p>
+</div>
+<span class="pub-tag">Health Expectancy</span>
+</div>
+
+---
+
+<p class="pub-year-heading">2023</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title">Uncovering the gender health data gap</p>
+<p class="pub-authors"><strong>Di Lego, V.</strong></p>
+<p class="pub-journal">Cadernos de Saúde Pública, v. 39, p. 1–4</p>
+</div>
+<span class="pub-tag">Gender</span>
+</div>
+
+---
+
+<p class="pub-year-heading">2022</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S1201971222001977">The impact of COVID-19 vaccines on the Case Fatality Rate: The importance of monitoring breakthrough infections</a></p>
+<p class="pub-authors"><strong>Di Lego, V.</strong>, Sanchez-Romero, M. & Fürnkranz-Prskawetz, A.</p>
+<p class="pub-journal">International Journal of Infectious Diseases. doi:10.1016/j.ijid.2022.03.059</p>
+</div>
+<span class="pub-tag">COVID-19</span>
+</div>
+
+---
+
+<p class="pub-year-heading">2021</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://comparativepopulationstudies.de/index.php/CPoS/article/view/460">Decrease in Life Expectancy in Germany in 2020: Men from Eastern Germany Most Affected</a></p>
+<p class="pub-authors">Luy, M., Sauerberg, M., Muszyńska-Spielauer, M. & <strong>Di Lego, V.</strong></p>
+<p class="pub-journal">Comparative Population Studies, 46. doi:10.12765/CPoS-2021-20</p>
+</div>
+<span class="pub-tag">Mortality</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.scielo.br/j/cadsc/a/wc8DBFJs4jRfdR4DG4KT6YM/">Health expectancy indicators: what do they measure?</a></p>
+<p class="pub-authors"><strong>Di Lego, V.</strong></p>
+<p class="pub-journal">Cadernos de Saúde Coletiva, 29(esp.), 115–129. doi:10.1590/1414-462X202199010376</p>
+</div>
+<span class="pub-tag">Methods</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.austriaca.at/0xc1aa5576_0x003c8cc2.pdf">Gender disparities in health at older ages and their consequences for well-being in Latin America and the Caribbean</a></p>
+<p class="pub-authors">Nepomuceno, M. R., <strong>Di Lego, V.</strong> & Turra, C. M.</p>
+<p class="pub-journal">Vienna Yearbook of Population Research, 19. doi:10.1553/populationyearbook2021.res2.1</p>
+</div>
+<span class="pub-tag">Gender</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://doi.org/10.1371/journal.pone.0245845">An indirect method to monitor the fraction of people ever infected with COVID-19: An application to the United States</a></p>
+<p class="pub-authors">Sánchez-Romero, M., <strong>Di Lego, V.</strong>, Prskawetz, A. & Queiroz, B. L.</p>
+<p class="pub-journal">PLoS ONE, 16(1), e0245845. doi:10.1371/journal.pone.0245845</p>
+</div>
+<span class="pub-tag">COVID-19</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://doi.org/10.1553/populationyearbook2021.int01">A demographic perspective on human wellbeing: Concepts, measurement and population heterogeneity</a></p>
+<p class="pub-authors">Spitzer, S., <strong>Di Lego, V.</strong>, Greulich, A. & Muttarak, R.</p>
+<p class="pub-journal">Vienna Yearbook of Population Research, 19. doi:10.1553/populationyearbook2021.int01</p>
+</div>
+<span class="pub-tag">Wellbeing</span>
+</div>
+
+---
+
+<p class="pub-year-heading">2020</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://link.springer.com/chapter/10.1007%2F978-3-030-37668-0_11">Gender differences in healthy and unhealthy life years</a></p>
+<p class="pub-authors"><strong>Di Lego, V.</strong>, Di Giulio, P. & Luy, M.</p>
+<p class="pub-journal">In: Jagger et al. (eds.), <em>International Handbook of Health Expectancies</em>. Springer, 151–172</p>
+</div>
+<span class="pub-tag">Gender</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.medrxiv.org/content/10.1101/2020.05.24.20111765v1">Age, gender and COVID-19 infections</a></p>
+<p class="pub-authors">Sobotka, T., Brzozowska, Z., Muttarak, R., Zeman, K. & <strong>Di Lego, V.</strong></p>
+<p class="pub-journal">medRxiv. doi:10.1101/2020.05.24.20111765</p>
+</div>
+<span class="pub-tag">COVID-19</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.econstor.eu/bitstream/10419/218732/1/1698672055.pdf">How many lives can be saved? A global view on the impact of testing, herd immunity and demographics on COVID-19 fatality rates</a></p>
+<p class="pub-authors">Sánchez-Romero, M., <strong>Di Lego, V.</strong>, Fürnkranz-Prskawetz, A. & Queiroz, B. L.</p>
+<p class="pub-journal">ECON WPS No. 05/2020, Vienna University of Technology</p>
+</div>
+<span class="pub-tag">COVID-19</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title"><a href="https://www.oeaw.ac.at/vid/data/demographic-data-sheets/european-demographic-data-sheet-2020">European Demographic Datasheet 2020</a></p>
+<p class="pub-authors">Sobotka, T. et al. (incl. <strong>Di Lego, V.</strong>)</p>
+<p class="pub-journal">Vienna Institute of Demography / Wittgenstein Centre</p>
+</div>
+<span class="pub-tag">Data</span>
+</div>
+
+---
+
+<p class="pub-year-heading">2018 & earlier</p>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title">Mortality levels among Brazilian Air Force Officers</p>
+<p class="pub-authors"><strong>Di Lego, V.</strong> & Turra, C. M.</p>
+<p class="pub-journal">MSc thesis, Cedeplar/UFMG, 2014; presented at European Population Conference, 2014</p>
+</div>
+<span class="pub-tag">Mortality</span>
+</div>
+
+<div class="pub-entry">
+<div>
+<p class="pub-title">Vanguards of Longevity: The case of Brazilian Air Force military</p>
+<p class="pub-authors"><strong>Di Lego, V.</strong></p>
+<p class="pub-journal">PhD dissertation, Cedeplar/UFMG, 2017</p>
+</div>
+<span class="pub-tag">Longevity</span>
+</div>
+
+---
+
+::: {style="font-size:0.8rem;color:#888;margin-top:2rem;"}
+For the complete list including working papers and reports, see the [Lattes CV](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4434755J6).
+:::

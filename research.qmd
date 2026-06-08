@@ -1,0 +1,53 @@
+---
+title: "Research"
+toc: false
+---
+
+<h2 class="section-heading">Research</h2>
+<hr class="section-rule">
+
+<p style="font-size:0.95rem;color:#444;line-height:1.8;max-width:700px;margin-bottom:2rem;">
+My work centres on formal demography and the measurement of health and mortality, with a particular focus on gender disparities, lifespan variability, and estimation sensitivity. I use mathematical and statistical methods alongside reproducible computing (primarily R) to tackle substantive demographic questions.
+</p>
+
+<div class="research-grid">
+
+<div class="research-card">
+<p class="research-card-label">Core theme</p>
+<h3>Lifespan Variability & Inequality</h3>
+<p>Theoretical and empirical work on measures of lifespan dispersion — variance, standard deviation, Gini coefficient, e†, Keyfitz entropy, Theil index, threshold age, and modal age at death. Connects formal life-table mathematics to substantive questions about who benefits from longevity gains.</p>
+</div>
+
+<div class="research-card">
+<p class="research-card-label">Core theme</p>
+<h3>Gender Gaps in Mortality & Health</h3>
+<p>Women live longer but spend more years in poor health. Disentangling the biological, social, and methodological explanations for this paradox — including the role of measurement error and self-reporting biases in health surveys — is central to my agenda.</p>
+</div>
+
+<div class="research-card">
+<p class="research-card-label">Core theme</p>
+<h3>Health Expectancy Methods</h3>
+<p>Sensitivity and perturbation analysis of healthy life expectancy indicators across different measurement approaches (Sullivan vs. multi-state models) and data sources. Part of the ERC project <em>Levels and Trends of Health Expectancy</em> at VID/OeAW.</p>
+</div>
+
+<div class="research-card">
+<p class="research-card-label">Core theme</p>
+<h3>Subgroup Mortality & Longevity</h3>
+<p>Selection effects, survival advantage, and mortality trajectories in specific population subgroups — including Brazilian Air Force officers (PhD work) and comparative analyses of high-longevity cohorts. Applications of competing-risks and frailty models.</p>
+</div>
+
+<div class="research-card">
+<p class="research-card-label">Applied</p>
+<h3>COVID-19 & Population Mortality</h3>
+<p>Age and gender patterns in infection and fatality; indirect estimation of cumulative infection; vaccination and its impact on case fatality rates; demographic perspectives on pandemic excess mortality in Brazil and Europe.</p>
+</div>
+
+<div class="research-card">
+<p class="research-card-label">Applied</p>
+<h3>Ageing in Brazil & Latin America</h3>
+<p>Demographic transition, population ageing, health inequality, and the limits of longevity in Brazil. Regional heterogeneity in mortality trends and the implications for public policy, pensions, and the healthcare system.</p>
+</div>
+
+</div>
+
+<p style="font-size:0.875rem;color:#666;">Code and replication materials are available on <a href="https://github.com/vdilego">GitHub</a>. Methods notes appear occasionally on the <a href="blog/index.qmd">blog</a>.</p>

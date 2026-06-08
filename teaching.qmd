@@ -1,0 +1,35 @@
+---
+title: "Teaching"
+toc: false
+---
+
+<h2 class="section-heading">Teaching</h2>
+<hr class="section-rule">
+
+<p style="font-size:0.95rem;color:#444;line-height:1.8;max-width:700px;margin-bottom:2.5rem;">
+I teach at the doctoral and master's level at Cedeplar/UFMG, integrating formal mathematical demography with applied statistical computing in R. My courses emphasise rigorous derivation, reproducible code, and connecting theory to substantive questions.
+</p>
+
+<div class="teaching-entry" style="border-top:1px solid #f0f0f0;">
+<p class="teaching-label">Doctoral seminar · Cedeplar/UFMG</p>
+<h3>Lifespan Variability and Lifespan Inequality</h3>
+<p>A combined lecture and R laboratory course. The theoretical arc moves from the life table as a probability distribution through ten variability and inequality measures: variance, standard deviation, Gini coefficient, e†, Keyfitz entropy (as the elasticity of e₀ to a proportional change in μ(x)), Theil index with additive decomposition, threshold age, modal age at death, and interquartile range of the life table distribution. Full derivations are provided, including integration by parts, Taylor expansions, and perturbation arguments. The laboratory implements all measures from scratch with embedded HMD data and reproduces trajectory plots in the style of Aburto et al. (2020, PNAS).</p>
+</div>
+
+<div class="teaching-entry">
+<p class="teaching-label">Doctoral seminar · Cedeplar/UFMG</p>
+<h3>Formal Demography</h3>
+<p>Core mathematical demography at the doctoral level: stable population theory, life table construction, decomposition methods, model life tables, and sensitivity analysis. Emphasis on the life table as a probability model and its connections to survival analysis and demographic estimation.</p>
+</div>
+
+<div class="teaching-entry">
+<p class="teaching-label">Workshop · Cedeplar/UFMG</p>
+<h3>Introduction to R Markdown</h3>
+<p>An introductory workshop on R Markdown for reproducible research: document workflows, code embedding, figures, tables, and publication-ready output. Given as part of the CEDEPLAR methods training programme.</p>
+</div>
+
+<div class="teaching-entry">
+<p class="teaching-label">Teaching materials</p>
+<h3>R Code & Course Resources</h3>
+<p>Lecture slides, R scripts, and course notes are made available via GitHub where possible. See <a href="https://github.com/vdilego">github.com/vdilego</a> for repositories associated with course content.</p>
+</div>

@@ -1,0 +1,67 @@
+---
+title: "About"
+toc: false
+---
+
+<h2 class="section-heading">About me</h2>
+<hr class="section-rule">
+
+<div class="about-layout">
+<div class="about-text">
+
+I am a **Professor of Demography** (Professora Adjunta) in the Departamento de Demografia, Faculdade de Ciências Econômicas ([FACE](https://face.ufmg.br/)), [Cedeplar](https://cedeplar.ufmg.br/), Universidade Federal de Minas Gerais (UFMG), Belo Horizonte, Brazil.
+
+Before returning to UFMG, I spent six years as a research scientist at the [Vienna Institute of Demography (VID)](https://www.oeaw.ac.at/vid), Austrian Academy of Sciences, as part of the Health and Longevity (HELO) research group led by Dr. Marc Luy, within the [Wittgenstein Centre for Demography and Global Human Capital (IIASA, OeAW, University of Vienna)](http://www.wittgensteincentre.org/). There I worked primarily on sensitivity analysis of healthy life expectancy indicators across different measurement and estimation methods, within the ERC project *Levels and Trends of Health Expectancy: Understanding its Measurement and Estimation Sensitivity*.
+
+My research focuses on the methodological challenges in measuring health and mortality, gender gaps in mortality and morbidity, lifespan variability and inequality, and the longevity of specific subgroups. I am committed to open and reproducible science, and I enjoy the intersection of formal mathematical demography with applied statistical computing.
+
+I hold a Bachelor's degree in Social Sciences with a minor in Philosophy from [FAFICH/UFMG](https://www.fafich.ufmg.br/), and a Master's and Doctorate in Demography from [Cedeplar/FACE/UFMG](https://www.cedeplar.ufmg.br/).
+
+I am also one of the editors of the [Vienna Yearbook of Population Research (VYPR)](https://www.oeaw.ac.at/vid/publications/serial-publications/vienna-yearbook-of-population-research). Feel free to get in touch about submissions.
+
+Outside research, I am a piano and cello player in the making, a tennis enthusiast, swimmer, cook, and reader — still very much a philosophy student at heart.
+
+<div class="tag-cloud" style="margin-top:1.5rem;">
+<span class="tag">Mortality</span>
+<span class="tag">Health Expectancy</span>
+<span class="tag">Gender</span>
+<span class="tag">Lifespan Variability</span>
+<span class="tag">Formal Demography</span>
+<span class="tag">COVID-19</span>
+<span class="tag">Brazil</span>
+<span class="tag">Sensitivity Analysis</span>
+</div>
+
+</div>
+<div>
+
+<div class="about-sidebar-block">
+<p class="about-sidebar-label">Current position</p>
+<p class="about-sidebar-item">Professor of Demography (Professora Adjunta)</p>
+<p class="about-sidebar-item">Departamento de Demografia</p>
+<p class="about-sidebar-item">Cedeplar / FACE / UFMG</p>
+<p class="about-sidebar-item">Belo Horizonte, Brazil</p>
+</div>
+
+<div class="about-sidebar-block">
+<p class="about-sidebar-label">Previous position</p>
+<p class="about-sidebar-item">Research Scientist (2018–2024)</p>
+<p class="about-sidebar-item">Vienna Institute of Demography, OeAW</p>
+<p class="about-sidebar-item">Wittgenstein Centre (IIASA, OeAW, Univ. Vienna)</p>
+</div>
+
+<div class="about-sidebar-block">
+<p class="about-sidebar-label">Education</p>
+<p class="about-sidebar-item">PhD Demography (2017) — Cedeplar/UFMG</p>
+<p class="about-sidebar-item">MSc Demography (2014) — Cedeplar/UFMG</p>
+<p class="about-sidebar-item">BSc Social Sciences / Philosophy (2010) — UFMG</p>
+</div>
+
+<div class="about-sidebar-block">
+<p class="about-sidebar-label">Contact</p>
+<p class="about-sidebar-item">vdilego@cedeplar.ufmg.br</p>
+<p class="about-sidebar-item"><a href="https://cedeplar.ufmg.br/pos-graduacao/demografia#professores-e-pesquisadores" style="font-size:0.82rem;">Faculty profile at Cedeplar →</a></p>
+</div>
+
+</div>
+</div>

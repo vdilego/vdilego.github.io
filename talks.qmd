@@ -1,0 +1,75 @@
+---
+title: "Talks"
+toc: false
+---
+
+<h2 class="section-heading">Talks & Presentations</h2>
+<hr class="section-rule">
+
+<div class="talk-entry" style="border-top:1px solid #f0f0f0;">
+<span class="talk-year">2024</span>
+<div>
+<h4>Mismatches in health: self-reported vs. tested cognition and mobility — a global analysis</h4>
+<p>Invited seminar · Cedeplar/UFMG, Belo Horizonte</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2023</span>
+<div>
+<h4>The gender health data gap: measurement, bias, and what we are missing</h4>
+<p>European Population Conference</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2022</span>
+<div>
+<h4>COVID-19 vaccines and breakthrough infections: a case fatality rate monitoring framework</h4>
+<p>European Population Conference</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2021</span>
+<div>
+<h4>Gender gaps in health expectancy: measurement, sensitivity, and interpretation</h4>
+<p>Population Association of America (PAA) Annual Meeting</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2020</span>
+<div>
+<h4>Age, sex and COVID-19: demographic determinants of early pandemic mortality</h4>
+<p>Vienna Institute of Demography Seminar Series</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2017</span>
+<div>
+<h4>Mortality selection among vanguard population subgroups: Brazilian Air Force officers</h4>
+<p>XXVIII International Population Conference (IUSSP)</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2016</span>
+<div>
+<h4>Mortality selection among adults in Brazil: the survival advantage of Air Force Officers</h4>
+<p>PAA Annual Meeting 2016 · 28th REVES Meeting</p>
+</div>
+</div>
+
+<div class="talk-entry">
+<span class="talk-year">2014</span>
+<div>
+<h4>Mortality among Brazilian Air Force officers</h4>
+<p>European Population Conference · VI Congreso Latinoamericano de Población</p>
+</div>
+</div>
+
+::: {style="margin-top:2rem;font-size:0.875rem;color:#666;"}
+*Slides and materials from selected talks are available on [GitHub](https://github.com/vdilego).*
+:::

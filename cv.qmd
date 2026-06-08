@@ -1,0 +1,68 @@
+---
+title: "CV"
+toc: false
+---
+
+<h2 class="section-heading">Curriculum Vitae</h2>
+<hr class="section-rule">
+
+::: {style="margin-bottom:2rem;"}
+Download the full CV as a PDF, or browse publications and talks using the site navigation.
+
+<a href="cv.pdf" style="display:inline-block;margin-top:1rem;font-size:0.875rem;font-weight:500;color:#1a5276;border:1px solid #c5d8e8;padding:0.45rem 1.1rem;border-radius:3px;text-decoration:none;">Download CV (PDF)</a>
+:::
+
+---
+
+### Current position
+
+**Professor of Demography** (Professora Adjunta)  
+Departamento de Demografia, Faculdade de Ciências Econômicas (FACE)  
+Cedeplar, Universidade Federal de Minas Gerais (UFMG)  
+Belo Horizonte, Minas Gerais, Brazil
+
+---
+
+### Previous positions
+
+**Research Scientist** (2018–2024)  
+Health and Longevity (HELO) Research Group  
+Vienna Institute of Demography, Austrian Academy of Sciences (VID/OeAW)  
+Wittgenstein Centre for Demography and Global Human Capital (IIASA, OeAW, University of Vienna), Vienna, Austria
+
+---
+
+### Education
+
+**PhD in Demography** (2017)  
+Cedeplar/FACE, Universidade Federal de Minas Gerais  
+*Vanguards of Longevity: The case of Brazilian Air Force military*  
+Supervisor: Prof. Cássio Maldonado Turra
+
+**MSc in Demography** (2014)  
+Cedeplar/FACE, Universidade Federal de Minas Gerais  
+*Mortality levels among Brazilian Air Force Officers*
+
+**BSc in Social Sciences** (2010), minor in Philosophy  
+FAFICH, Universidade Federal de Minas Gerais
+
+---
+
+### Selected grants & affiliations
+
+- Editor, [Vienna Yearbook of Population Research (VYPR)](https://www.oeaw.ac.at/vid/publications/serial-publications/vienna-yearbook-of-population-research)
+- ERC project: *Levels and Trends of Health Expectancy: Understanding its Measurement and Estimation Sensitivity* (VID/OeAW, 2018–2024)
+- CNPq research productivity grant
+
+---
+
+### Links
+
+- [Lattes CV](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4434755J6)
+- [Google Scholar](https://scholar.google.com/scholar?q=Vanessa+Di+Lego)
+- [GitHub](https://github.com/vdilego)
+- [Cedeplar faculty page](https://cedeplar.ufmg.br/pos-graduacao/demografia#professores-e-pesquisadores)
+
+::: {style="font-size:0.8rem;color:#888;margin-top:2rem;border-top:1px solid #f0f0f0;padding-top:1rem;"}
+*To update the PDF CV, replace `cv.pdf` in the root of the repository.*
+:::
