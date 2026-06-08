@@ -12,7 +12,6 @@ website:
     left:
       - text: "Vanessa Di Lego"
         href: index.qmd
-        style: "font-weight:600;"
     right:
       - text: "About"
         href: about.qmd
